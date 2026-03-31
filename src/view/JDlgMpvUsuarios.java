@@ -20,36 +20,24 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro de Usuários");
         setLocationRelativeTo(null);
-        jTxtCodigo.setEnabled(false);
-        jTxtNome.setEnabled(false);
-        jTxtApelido.setEnabled(false);
-        jFmtCpf.setEnabled(false);
-        jFmtDataNascimento.setEnabled(false);
-        jCboNivel.setEnabled(false);
-        jPwdSenha.setEnabled(false);
-        jChbAtivo.setEnabled(false);
-        jBtnAlterar.setEnabled(true);
-        jBtnCancelar.setEnabled(false);
-        jBtnConfirmar.setEnabled(false);
-        jBtnPesquisar.setEnabled(true);
-        jBtnExcluir.setEnabled(true);
+        desabilitar();
     }
 
-    public void habilitar() {
-        jTxtCodigo.setEnabled(true);
-        jTxtNome.setEnabled(true);
-        jTxtApelido.setEnabled(true);
-        jFmtCpf.setEnabled(true);
-        jFmtDataNascimento.setEnabled(true);
-        jCboNivel.setEnabled(true);
-        jPwdSenha.setEnabled(true);
-        jChbAtivo.setEnabled(true);
-        jBtnAlterar.setEnabled(false);
-        jBtnCancelar.setEnabled(true);
-        jBtnConfirmar.setEnabled(true);
-        jBtnPesquisar.setEnabled(false);
-        jBtnExcluir.setEnabled(false);
-        jBtnIncluir.setEnabled(false);
+    public void habilitar(boolean valor) {
+        jTxtCodigo.setEnabled(valor);
+        jTxtNome.setEnabled(valor);
+        jTxtApelido.setEnabled(valor);
+        jFmtCpf.setEnabled(valor);
+        jFmtDataNascimento.setEnabled(valor);
+        jCboNivel.setEnabled(valor);
+        jPwdSenha.setEnabled(valor);
+        jChbAtivo.setEnabled(valor);
+        jBtnAlterar.setEnabled(!valor);
+        jBtnCancelar.setEnabled(valor);
+        jBtnConfirmar.setEnabled(valor);
+        jBtnPesquisar.setEnabled(!valor);
+        jBtnExcluir.setEnabled(!valor);
+        jBtnIncluir.setEnabled(!valor);
     }
 
     public void desabilitar() {
@@ -282,12 +270,12 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         // TODO add your handling code here:
-        habilitar();
+        habilitar(true);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         // TODO add your handling code here:
-        desabilitar();
+        habilitar(false);
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
@@ -297,13 +285,13 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
         // TODO add your handling code here:
-        habilitar();
+        habilitar(true);
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
         // TODO add your handling code here:
-        
-        JOptionPane.showConfirmDialog(null,"Confirmar Exclusão?");
+        JOptionPane.showConfirmDialog(null, "Confirmar Exclusão?",
+                "Selecione uma opção", JOptionPane.YES_NO_OPTION);
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
