@@ -21,6 +21,20 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
         setTitle("Cadastro de Usuários");
         setLocationRelativeTo(null);
         desabilitar();
+        jTxtCodigo.setEnabled(false);
+        jTxtNome.setEnabled(false);
+        jTxtApelido.setEnabled(false);
+        jFmtCpf.setEnabled(false);
+        jFmtDataNascimento.setEnabled(false);
+        jCboNivel.setEnabled(false);
+        jPwdSenha.setEnabled(false);
+        jChbAtivo.setEnabled(false);
+        jBtnAlterar.setEnabled(false);
+        jBtnCancelar.setEnabled(false);
+        jBtnConfirmar.setEnabled(false);
+        jBtnPesquisar.setEnabled(false);
+        jBtnExcluir.setEnabled(false);
+        jBtnIncluir.setEnabled(true);
     }
 
     public void habilitar(boolean valor) {
@@ -109,7 +123,11 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
 
         jLabel7.setText("Senha");
 
-        jPwdSenha.setText("jPasswordField1");
+        jPwdSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPwdSenhaActionPerformed(evt);
+            }
+        });
 
         jChbAtivo.setText("Ativo");
 
@@ -298,6 +316,10 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
         // TODO add your handling code here:
         JOptionPane.showInputDialog(null, "Entre com a chave primaria");
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
+
+    private void jPwdSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPwdSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPwdSenhaActionPerformed
 
     /**
      * @param args the command line arguments
