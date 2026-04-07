@@ -21,20 +21,6 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
         setTitle("Cadastro de Usuários");
         setLocationRelativeTo(null);
         desabilitar();
-        jTxtCodigo.setEnabled(false);
-        jTxtNome.setEnabled(false);
-        jTxtApelido.setEnabled(false);
-        jFmtCpf.setEnabled(false);
-        jFmtDataNascimento.setEnabled(false);
-        jCboNivel.setEnabled(false);
-        jPwdSenha.setEnabled(false);
-        jChbAtivo.setEnabled(false);
-        jBtnAlterar.setEnabled(false);
-        jBtnCancelar.setEnabled(false);
-        jBtnConfirmar.setEnabled(false);
-        jBtnPesquisar.setEnabled(false);
-        jBtnExcluir.setEnabled(false);
-        jBtnIncluir.setEnabled(true);
     }
 
     public void habilitar(boolean valor) {
@@ -55,19 +41,19 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
     }
 
     public void desabilitar() {
-        jTxtCodigo.setEnabled(true);
-        jTxtNome.setEnabled(true);
-        jTxtApelido.setEnabled(true);
-        jFmtCpf.setEnabled(true);
-        jFmtDataNascimento.setEnabled(true);
-        jCboNivel.setEnabled(true);
-        jPwdSenha.setEnabled(true);
-        jChbAtivo.setEnabled(true);
+        jTxtCodigo.setEnabled(false);
+        jTxtNome.setEnabled(false);
+        jTxtApelido.setEnabled(false);
+        jFmtCpf.setEnabled(false);
+        jFmtDataNascimento.setEnabled(false);
+        jCboNivel.setEnabled(false);
+        jPwdSenha.setEnabled(false);
+        jChbAtivo.setEnabled(false);
         jBtnAlterar.setEnabled(true);
-        jBtnCancelar.setEnabled(false);
+        jBtnCancelar.setEnabled(true);
         jBtnConfirmar.setEnabled(true);
-        jBtnPesquisar.setEnabled(true);
-        jBtnExcluir.setEnabled(true);
+        jBtnPesquisar.setEnabled(false);
+        jBtnExcluir.setEnabled(false);
         jBtnIncluir.setEnabled(true);
     }
 
